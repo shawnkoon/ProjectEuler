@@ -12,7 +12,7 @@
 
 import java.util.*;
 
-public class Problem9
+public class Problem09
 {
    public static void main(String[] args)
    {
