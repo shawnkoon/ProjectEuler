@@ -1,17 +1,21 @@
+import java.math.BigInteger;
 /*
 	Idea: My initial thought is to just code brute force way.
 				Calculating actual answer of power then sum the digits.
 				Problem would be that 2^1000 will take forever to finish.
+				Possibliy use BigInteger class for higher max value.
+				Or could use linked list operation similar to Prob #13 (Large sum)
 */
 public class Problem16 {
 	public static void main(String[] args) {
-		double power = 15;
-		double base = 2;
+		int power = 1000, base = 2;
 		long sum = 0;
-		long result = (long) Math.pow(base, power);
+		BigInteger result = new BigInteger(Integer.toString(base));
+		result = result.pow(power);
 
-		for(int index = 0; index < Long.toString(result).length(); index++)
-			sum += Long.parseLong(Character.toString(Long.toString(result).charAt(index)));
+		for(int index = 0; index < result.toString().length(); index++)
+			sum += Long.parseLong(Character.toString(result.toString().charAt(index)));
+
 		System.out.println("The actual numb : " + result);
 		System.out.println("The result is   : " + sum);
 	}// End of main().
