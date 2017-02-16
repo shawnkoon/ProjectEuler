@@ -32,6 +32,7 @@ public class Problem18 {
 			}
 			int row = 0, col = 0, sum = 0;
 			recFindMaxRoute(row, col, sum);
+			fopen.close();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
